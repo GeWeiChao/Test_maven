@@ -26,7 +26,7 @@
 
 <body>
     <img src="Test_maven/view/upload/1.jpg">
-
+    <img src="Test_maven/view/upload/1.jpg">
     <div class="row visible-on div">
         <div class="col-xs-6 col-sm-3" style="background-color: #dedef8;
 											  box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
