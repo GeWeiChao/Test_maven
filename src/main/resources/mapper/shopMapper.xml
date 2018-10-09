@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+ <mapper namespace="com.gwc.dao.shopDao">
+ 	
+ 	<!-- <select id="add" parameterType="com.gwc.entity.shop">
+ 		insert into shop(name) values(#{name})
+ 	</select>
+ 	
+ 	<select id="select" resultType="com.gwc.entity.shop">
+ 		select * from shop
+ 	</select> -->
+ 	
+ </mapper>

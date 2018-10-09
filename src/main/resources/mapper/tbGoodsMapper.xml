@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+ <mapper namespace="com.gwc.dao.tbGoodsDao">
+ 	<!-- 多对一   嵌套结果查询 -->
+ 	<select id="tbGoodsSelect" parameterType="string" resultMap="tb_Goodst_map_select">
+ 		select g.*,t.* from tb_Goods g LEFT JOIN tb_Goods_Type t on g.typeid=t.typeid
+ 		<where>
+ 			g.typeid = t.typeid
+ 		</where>
+ 		ORDER BY goodsid ASC
+ 	</select>
+ 	<resultMap type="com.gwc.entity.tb_Goods" id="tb_Goodst_map_select" autoMapping="true">
+ 		<id column="goodsid" property="goodsid"/>
+ 		<association property="goodstype" column="typeid" javaType="com.gwc.entity.tb_Goods_Type" autoMapping="true">
+ 			<id column="typeid" property="typeid"/>
+ 		</association>
+ 	</resultMap>
+ </mapper>
